@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SectionSalesComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
   }
 
