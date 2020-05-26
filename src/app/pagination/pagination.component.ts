@@ -17,8 +17,6 @@ export class PaginationComponent implements OnInit {
   @Output() goNext = new EventEmitter<boolean>();
   @Output() goPage = new EventEmitter<number>();
 
-
-
   constructor() { }
 
   ngOnInit(): void {
@@ -43,4 +41,5 @@ export class PaginationComponent implements OnInit {
   isLastPage(): boolean{
     return this.page * this.perPage >= this.count;
   }
+
 }

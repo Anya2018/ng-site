@@ -11,7 +11,8 @@ export class SectionOrdersComponent implements OnInit {
 
   constructor(private _salesData: SalesDataService) { }
 
-  orders: Order[];
+  //orders: Order[];
+  orders: any;
   total = 0;
   page = 1;
   limit = 10;
@@ -24,10 +25,11 @@ export class SectionOrdersComponent implements OnInit {
   getOrders(): void{
     this._salesData.getOrders(this.page,this.limit)
       .subscribe(res => {
+        console.log('Result from getOrders: ', res);
         this.orders = res['page']['data'];
         this.total  = res['page'].total;
-        this.loading = false;
-         
+        this.loading = false;   
+        
       });
   }
 
