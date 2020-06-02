@@ -58,7 +58,7 @@ export class LineChartComponent implements OnInit {
         console.log('r',r);
 
         //pushing our data into format which is usable by chartJS:
-        this.lineChartLabels = r[0].orders.map(o=>o['date']);
+        this.lineChartLabels = r[0].orders.map(o => o['date']);
 
         //3 arrays for each customer which chartJS expects:
         this.lineChartData =[
